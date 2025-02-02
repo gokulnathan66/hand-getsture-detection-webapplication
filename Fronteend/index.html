@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webcam Gesture Recognition</title>
+  <style>
+    .video-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      max-width: 90%;
+      margin: auto;
+    }
+    #video, #output {
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      max-width: 48%;
+      height: auto;
+    }
+    #gesture {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+    #startButton {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align: center;">Hand Gesture Recognition</h1>
+  
+  <button id="startButton">Start Stream</button>
+  
+  <div class="video-container">
+    <video id="video" autoplay muted></video>
+    <img id="output" alt="Processed frame will appear here" />
+  </div>
+
+  <canvas id="canvas" style="display: none;"></canvas>
+  <div id="gesture">Recognized Gesture: None</div>
+
+  <script>
+    const video = document.getElementById("video");
+    const canvas = document.getElementById("canvas");
+    const output = document.getElementById("output");
+    const gestureDisplay = document.getElementById("gesture");
+    const startButton = document.getElementById("startButton");
+
+    const API_URL = " http://localhost:8000/recognize-gesture/";
+    // attach the api endpoint to the API_URL variable when running locall y it is http://localhost:5000/recognize-gesture/
+    // or when running on a server it is the server's URL followed by /recognize-gesture/
+    // e.g. https://myserver.com/recognize-gesture/ 
+
+    async function startWebcam() {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+        video.srcObject = stream;
+        await new Promise(resolve => video.onloadedmetadata = resolve);
+      } catch (err) {
+        console.error("Error accessing webcam:", err);
+      }
+    }
+
+    async function processFrame() {
+      if (video.videoWidth === 0 || video.videoHeight === 0) {
+        requestAnimationFrame(processFrame);
+        return;
+      }
+
+      const context = canvas.getContext("2d");
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+
+      context.drawImage(video, 0, 0, canvas.width, canvas.height);
+      const blob = await new Promise(resolve => canvas.toBlob(resolve, "image/jpeg"));
+
+      const formData = new FormData();
+      formData.append("file", blob, "frame.jpg");
+
+      try {
+        const response = await fetch(API_URL, { method: "POST", body: formData });
+
+        if (!response.ok) throw new Error(`Error: ${response.statusText}`);
+
+        const data = await response.json();
+
+        gestureDisplay.textContent = `Recognized Gesture: ${data.gestures?.join(", ") || "None"}`;
+
+        if (data.processed_image) {
+          output.src = `data:image/jpeg;base64,${data.processed_image}`;
+        }
+      } catch (err) {
+        console.error("Error processing frame:", err);
+      }
+
+      requestAnimationFrame(processFrame);
+    }
+
+    startButton.addEventListener("click", async () => {
+      startButton.style.display = "none"; // Hide button after starting
+      await startWebcam();
+      requestAnimationFrame(processFrame);
+    });
+  </script>
+</body>
+</html>
