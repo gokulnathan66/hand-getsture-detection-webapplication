@@ -54,7 +54,7 @@ This approach ensures **low latency, minimal resource consumption, and scalable 
 
 when Locally running the Model and accessing the model through API with a Frontend web application. 
 
-![vlcsnap-2025-02-03-16h09m55s825.png](attachment:aafa9c13-ad57-414f-bf4e-679825de483b:vlcsnap-2025-02-03-16h09m55s825.png)
+![Alt text](OutputImages/vlcsnap-2025-02-03-16h09m55s825.png)
 
 ![vlcsnap-2025-02-03-16h10m11s356.png](attachment:2ff0727a-e49a-4ed2-855a-9caab62cc98d:vlcsnap-2025-02-03-16h10m11s356.png)
 
