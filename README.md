@@ -64,7 +64,7 @@ when Locally running the Model and accessing the model through API with a Fronte
 
 ![Alt text](OutputImages/vlcsnap-2025-02-03-16h10m38s639.png)
 
-You tube Video:  ![yOUTUBE VIDEO](https://www.youtube.com/watch?v=RWZmBtyMh4w)
+You tube Video:  ![](https://www.youtube.com/watch?v=RWZmBtyMh4w)
 
 You tube Video:  https://youtu.be/RWZmBtyMh4w
 
