@@ -22,3 +22,8 @@
 - Host the index.html file from Live server(VS code) or Open it for the File Manager.
 - It will ask to Allow the Camera.
 - And Now the Frontend will capture frame send to backend and it will be processed by the Model API.
+
+Docker image in Dokcer HUB: 
+
+## Implementing in AWS [link]
+## full detailed report [link]
