@@ -53,10 +53,10 @@
     const gestureDisplay = document.getElementById("gesture");
     const startButton = document.getElementById("startButton");
 
-    const API_URL = "http://gokul.gokulnathan45.click/recognize-gesture/";
+    const API_URL = "http://localhost:5000/recognize-gesture/";
     // attach the api endpoint to the API_URL variable when running locall y it is http://localhost:5000/recognize-gesture/
     // or when running on a server it is the server's URL followed by /recognize-gesture/
-    // e.g. https://myserver.com/recognize-gesture/ 
+    // e.g. https://myserver.com/recognize-gesture/ or http://gokul.gokulnathan45.click/recognize-gesture/
 
     async function startWebcam() {
       try {
