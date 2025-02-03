@@ -43,47 +43,47 @@ class HandGestureRecognizer:
         pinky_tip = hand_landmarks.landmark[self.mp_hands.HandLandmark.PINKY_TIP]
         wrist = hand_landmarks.landmark[self.mp_hands.HandLandmark.WRIST]
 
-        # Angle-based detection
+        # Calculate key angles
         index_middle_angle = self.calculate_angle(
             hand_landmarks.landmark[self.mp_hands.HandLandmark.INDEX_FINGER_MCP],
             hand_landmarks.landmark[self.mp_hands.HandLandmark.MIDDLE_FINGER_MCP],
             hand_landmarks.landmark[self.mp_hands.HandLandmark.RING_FINGER_MCP]
         )
-
-        # 👍 Thumbs Up
-# 👍 Thumbs Up Gesture
-        if thumb_tip.y < wrist.y and \
-        index_tip.y > wrist.y and middle_tip.y > wrist.y and \
-        ring_tip.y > wrist.y and pinky_tip.y > wrist.y and \
-        thumb_tip.x < index_tip.x:  # Ensures the thumb is pointing upwards
+        
+        thumb_index_distance = np.linalg.norm(
+            np.array([thumb_tip.x, thumb_tip.y]) - np.array([index_tip.x, index_tip.y])
+        )
+        # 👍 Thumbs Up (Thumb extended, other fingers curled)
+        if thumb_tip.y < wrist.y and all(tip.y > hand_landmarks.landmark[self.mp_hands.HandLandmark.INDEX_FINGER_MCP].y for tip in [index_tip, middle_tip, ring_tip, pinky_tip]):
             return "👍 Thumbs Up"
 
-        # ✌️ Peace Sign
-        if index_tip.y < thumb_tip.y and middle_tip.y < thumb_tip.y and \
-           ring_tip.y > thumb_tip.y and pinky_tip.y > thumb_tip.y and \
-           index_middle_angle < 30:
+        # ✌️ Peace Sign (Index and Middle fingers up, others curled)
+        if index_tip.y < wrist.y and middle_tip.y < wrist.y and \
+           ring_tip.y > hand_landmarks.landmark[self.mp_hands.HandLandmark.RING_FINGER_MCP].y and \
+           pinky_tip.y > hand_landmarks.landmark[self.mp_hands.HandLandmark.PINKY_MCP].y:
             return "✌️ Peace Sign"
 
-        # 👊 Fist
+        # 👊 Fist (All fingers curled close to the wrist)
         if all(tip.y > wrist.y for tip in [thumb_tip, index_tip, middle_tip, ring_tip, pinky_tip]):
             return "👊 Fist"
 
-        # 🤘 Rock Sign
+        # 🤘 Rock Sign (Index and pinky extended, middle and ring curled)
         if index_tip.y < middle_tip.y and pinky_tip.y < middle_tip.y and \
            ring_tip.y > middle_tip.y:
             return "🤘 Rock Sign"
 
-
-        # 👌 OK Sign (Thumb and index tip close together)
-        if np.linalg.norm(np.array([thumb_tip.x, thumb_tip.y]) - np.array([index_tip.x, index_tip.y])) < 0.05 and \
-           all(tip.y < wrist.y for tip in [middle_tip, ring_tip, pinky_tip]):
+        # 👌 OK Sign (Thumb and index forming a circle, others extended)
+        if thumb_index_distance < 0.05 and all(tip.y < wrist.y for tip in [middle_tip, ring_tip, pinky_tip]):
             return "👌 OK Sign"
 
-        # 🤙 Call Me Sign (Thumb and pinky extended)
-        if thumb_tip.y < wrist.y and pinky_tip.y < wrist.y and \
-           all(tip.y > wrist.y for tip in [index_tip, middle_tip, ring_tip]):
-            return "🤙 Call Me"
-
-
+        # 🖐️ Open Palm (All fingers fully extended)
+        if all(tip.y < wrist.y for tip in [thumb_tip, index_tip, middle_tip, ring_tip, pinky_tip]) and \
+           all(tip.y < hand_landmarks.landmark[finger_mcp].y for tip, finger_mcp in zip(
+               [index_tip, middle_tip, ring_tip, pinky_tip], 
+               [self.mp_hands.HandLandmark.INDEX_FINGER_MCP, 
+                self.mp_hands.HandLandmark.MIDDLE_FINGER_MCP,
+                self.mp_hands.HandLandmark.RING_FINGER_MCP,
+                self.mp_hands.HandLandmark.PINKY_MCP])):
+            return "🖐️ Open Palm"
 
         return "Gesture not recognized"
