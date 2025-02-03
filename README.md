@@ -56,13 +56,15 @@ when Locally running the Model and accessing the model through API with a Fronte
 
 ![Alt text](OutputImages/vlcsnap-2025-02-03-16h09m55s825.png)
 
-![vlcsnap-2025-02-03-16h10m11s356.png](attachment:2ff0727a-e49a-4ed2-855a-9caab62cc98d:vlcsnap-2025-02-03-16h10m11s356.png)
+![Alt text](OutputImages/vlcsnap-2025-02-03-16h10m11s356.png)
 
-![vlcsnap-2025-02-03-16h10m20s648.png](attachment:aee6dd76-e1cf-4896-9cb6-03e59441d407:vlcsnap-2025-02-03-16h10m20s648.png)
+![Alt text](OutputImages/vlcsnap-2025-02-03-16h10m20s648.png)
 
-![vlcsnap-2025-02-03-16h10m29s027.png](attachment:f71e7b42-8b28-4a32-aaa3-ece8b431df4a:vlcsnap-2025-02-03-16h10m29s027.png)
+![Alt text](OutputImages/vlcsnap-2025-02-03-16h10m29s027.png)
 
-![vlcsnap-2025-02-03-16h10m38s639.png](attachment:28261021-2920-404b-bb94-2d77c8f7c4c8:vlcsnap-2025-02-03-16h10m38s639.png)
+![Alt text](OutputImages/vlcsnap-2025-02-03-16h10m38s639.png)
+
+You tube Video:  ![yOUTUBE VIDEO](https://www.youtube.com/watch?v=RWZmBtyMh4w)
 
 You tube Video:  https://youtu.be/RWZmBtyMh4w
 
