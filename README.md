@@ -50,5 +50,21 @@ Instead, by using **RESTful API endpoints**, we eliminate the need for a **maste
 
 This approach ensures **low latency, minimal resource consumption, and scalable deployment** of the hand gesture detection model in the cloud. By leveraging **REST APIs and Base64 encoding**, we eliminate the complexity of maintaining WebSocket connections, making the system more **efficient, cost-effective, and production-ready**.
 
+# Output
+
+when Locally running the Model and accessing the model through API with a Frontend web application. 
+
+![vlcsnap-2025-02-03-16h09m55s825.png](attachment:aafa9c13-ad57-414f-bf4e-679825de483b:vlcsnap-2025-02-03-16h09m55s825.png)
+
+![vlcsnap-2025-02-03-16h10m11s356.png](attachment:2ff0727a-e49a-4ed2-855a-9caab62cc98d:vlcsnap-2025-02-03-16h10m11s356.png)
+
+![vlcsnap-2025-02-03-16h10m20s648.png](attachment:aee6dd76-e1cf-4896-9cb6-03e59441d407:vlcsnap-2025-02-03-16h10m20s648.png)
+
+![vlcsnap-2025-02-03-16h10m29s027.png](attachment:f71e7b42-8b28-4a32-aaa3-ece8b431df4a:vlcsnap-2025-02-03-16h10m29s027.png)
+
+![vlcsnap-2025-02-03-16h10m38s639.png](attachment:28261021-2920-404b-bb94-2d77c8f7c4c8:vlcsnap-2025-02-03-16h10m38s639.png)
+
+You tube Video:  https://youtu.be/RWZmBtyMh4w
+
 ## Implementing in AWS [link]
 ## full detailed report [link]
