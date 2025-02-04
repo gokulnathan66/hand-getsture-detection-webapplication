@@ -64,10 +64,10 @@ when Locally running the Model and accessing the model through API with a Fronte
 
 ![Alt text](OutputImages/vlcsnap-2025-02-03-16h10m38s639.png)
 
-You tube Video: 
-[Watch the YouTube Video] (https://www.youtube.com/watch?v=RWZmBtyMh4w)
+Demo Video: 
+[Watch the YouTube Video](https://www.youtube.com/watch?v=RWZmBtyMh4w)
 
 
 # Deployment of Model in AWD:
-[![Medium Article](https://medium.com/@gokulnathan66/hand-gesture-detection-a-production-ready-ml-deployment-1d4f55db3053)
+[[Medium Article](https://medium.com/@gokulnathan66/hand-gesture-detection-a-production-ready-ml-deployment-1d4f55db3053)
 
