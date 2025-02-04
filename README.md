@@ -69,5 +69,6 @@ Demo Video:
 
 
 # Deployment of Model in AWD:
-[![Medium Article](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*oyqsBlZcbZUXcItey7HS8g.png)(https://medium.com/@gokulnathan66/hand-gesture-detection-a-production-ready-ml-deployment-1d4f55db3053)
+![Article Link](https://medium.com/@gokulnathan66/hand-gesture-detection-a-production-ready-ml-deployment-1d4f55db3053)
+![Medium Article](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*oyqsBlZcbZUXcItey7HS8g.png)
 
