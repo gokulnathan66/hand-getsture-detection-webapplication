@@ -9,6 +9,15 @@
 - Host the index.html file from Live server(VS code) or Open it for the File Manager.
 - It will ask to Allow the Camera.
 - And Now the Frontend will capture frame send to backend and it will be processed by the Model API.
+
+Demo Video: 
+[Watch the YouTube Video](https://www.youtube.com/watch?v=RWZmBtyMh4w)
+
+
+## Deployment of Model in AWD:
+[Article Link](https://medium.com/@gokulnathan66/hand-gesture-detection-a-production-ready-ml-deployment-1d4f55db3053)
+![Medium Article](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*oyqsBlZcbZUXcItey7HS8g.png)
+
 ## File Structure
 
 ```docker
@@ -64,11 +73,4 @@ when Locally running the Model and accessing the model through API with a Fronte
 
 ![Alt text](OutputImages/vlcsnap-2025-02-03-16h10m38s639.png)
 
-Demo Video: 
-[Watch the YouTube Video](https://www.youtube.com/watch?v=RWZmBtyMh4w)
-
-
-# Deployment of Model in AWD:
-[Article Link](https://medium.com/@gokulnathan66/hand-gesture-detection-a-production-ready-ml-deployment-1d4f55db3053)
-![Medium Article](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*oyqsBlZcbZUXcItey7HS8g.png)
 
