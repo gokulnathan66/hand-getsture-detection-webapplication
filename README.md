@@ -68,5 +68,5 @@ You tube Video:  ![](https://www.youtube.com/watch?v=RWZmBtyMh4w)
 
 You tube Video:  https://youtu.be/RWZmBtyMh4w
 
-## Implementing in AWS [link]
-## full detailed report [link]
+# Deployment of Model in AWD:
+![](https://medium.com/@gokulnathan66/hand-gesture-detection-a-production-ready-ml-deployment-1d4f55db3053)
