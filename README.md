@@ -18,6 +18,11 @@ Demo Video:
 [Article Link](https://medium.com/@gokulnathan66/hand-gesture-detection-a-production-ready-ml-deployment-1d4f55db3053)
 ![Medium Article](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*oyqsBlZcbZUXcItey7HS8g.png)
 
+LinkedIN Article:
+[Article Link]([https://medium.com/@gokulnathan66/hand-gesture-detection-a-production-ready-ml-deployment-1d4f55db3053](https://www.linkedin.com/pulse/hand-gesture-detection-production-ready-ml-deployment-gokulnathan-b-7rrhc/?trackingId=EHwVmgrXRnakIjqpJHSoTA%3D%3D
+))
+
+
 ## File Structure
 
 ```docker
