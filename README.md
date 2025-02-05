@@ -20,7 +20,7 @@ Demo Video:
 
 LinkedIN Article:
 [Article Link]([https://medium.com/@gokulnathan66/hand-gesture-detection-a-production-ready-ml-deployment-1d4f55db3053](https://www.linkedin.com/pulse/hand-gesture-detection-production-ready-ml-deployment-gokulnathan-b-7rrhc/?trackingId=EHwVmgrXRnakIjqpJHSoTA%3D%3D
-))
+)
 
 
 ## File Structure
